@@ -1,24 +1,19 @@
 import pandas as pd
 import pickle
+import os
 from datetime import timedelta
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sqlalchemy import create_engine
 
-DB_PATH = 'sqlite:///c:/projects/DE/New folder/customer_analytics_platform/data/customer_analytics.db'
-MODEL_PATH = 'c:/projects/DE/New folder/customer_analytics_platform/data/churn_model.pkl'
+# Configuration - Use relative paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(BASE_DIR)
+DATA_DIR = os.path.join(PROJECT_DIR, 'data')
 
-import pandas as pd
-import pickle
-from datetime import timedelta
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report
-from sqlalchemy import create_engine
-
-DB_PATH = 'sqlite:///c:/projects/DE/New folder/customer_analytics_platform/data/customer_analytics.db'
-MODEL_PATH = 'c:/projects/DE/New folder/customer_analytics_platform/data/churn_model.pkl'
+DB_PATH = f'sqlite:///{os.path.join(DATA_DIR, "customer_analytics.db")}'
+MODEL_PATH = os.path.join(DATA_DIR, 'churn_model.pkl')
 
 def load_data(engine):
     # Only transactions table exists now

@@ -4,10 +4,14 @@ from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime
 from sqlalchemy.orm import declarative_base
 import requests
 
-# Configuration
-DB_PATH = 'sqlite:///c:/projects/DE/New folder/customer_analytics_platform/data/customer_analytics.db'
+# Configuration - Use relative paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(BASE_DIR)
+DATA_DIR = os.path.join(PROJECT_DIR, 'data')
+
+DB_PATH = f'sqlite:///{os.path.join(DATA_DIR, "customer_analytics.db")}'
 DATA_URL = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx'
-LOCAL_FILE = 'c:/projects/DE/New folder/customer_analytics_platform/data/online_retail.xlsx'
+LOCAL_FILE = os.path.join(DATA_DIR, 'online_retail.xlsx')
 
 Base = declarative_base()
 

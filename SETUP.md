@@ -125,6 +125,11 @@ python src/database_setup.py
 ```bash
 python src/model.py
 ```
+### Issue: Dashboard shows errors
+**Solution**: To Launch the Dashboard:
+```bash
+streamlit run app.py
+```
 
 ### Issue: Path with spaces (e.g., "New folder")
 **Solution**: Use quotes in PowerShell:

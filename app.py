@@ -3,14 +3,18 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import pickle
+import os
 from sqlalchemy import create_engine
 from src.analysis import get_rfm_segments, get_cohort_analysis
 from src.model import feature_engineering, load_data
 
-# Config
+# Config - Use relative paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+
 st.set_page_config(page_title="Customer Analytics Platform", layout="wide")
-DB_PATH = 'sqlite:///c:/projects/DE/New folder/customer_analytics_platform/data/customer_analytics.db'
-MODEL_PATH = 'c:/projects/DE/New folder/customer_analytics_platform/data/churn_model.pkl'
+DB_PATH = f'sqlite:///{os.path.join(DATA_DIR, "customer_analytics.db")}'
+MODEL_PATH = os.path.join(DATA_DIR, 'churn_model.pkl')
 
 @st.cache_resource
 def get_db_engine():
