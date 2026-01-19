@@ -12,9 +12,23 @@ Imagine you're running an online store with thousands of customers. This platfor
 
 ---
 
-## Live Demo
+## 📸 Dashboard Preview
 
-![Dashboard Preview](https://via.placeholder.com/800x400/1e1e1e/00ff00?text=Executive+Dashboard+Preview)
+### Executive Summary
+![Executive Dashboard](images/executive_summary.png)
+*Real-time KPIs, revenue trends, and scenario modeling*
+
+### Customer Segmentation
+![RFM Analysis](images/rfm_analysis.png)
+*Interactive RFM clustering with segment breakdown*
+
+### Cohort Retention
+![Cohort Heatmap](images/cohort_heatmap.png)
+*Month-over-month retention analysis*
+
+### Churn Predictions
+![Churn Risk Analysis](images/churn_predictions.png)
+*ML-powered risk scoring with actionable insights*
 
 ---
 
