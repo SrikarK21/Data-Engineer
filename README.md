@@ -239,17 +239,8 @@ MIT License - feel free to use this for learning or commercial projects.
 
 ---
 
-## Contact
-
-**Your Name**  
-📧 your.email@example.com  
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile)  
-💼 [Portfolio](https://yourportfolio.com)
-
----
-
 ## Acknowledgments
 
 - **Dataset**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Online+Retail)
 - **Inspiration**: Real-world e-commerce analytics challenges
-- **Tools**: Built with ❤️ using Python, Streamlit, and Scikit-learn
+- **Tools**: Built using Python, Streamlit, and Scikit-learn
